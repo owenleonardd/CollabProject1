@@ -22,7 +22,7 @@ public class MovementHandler : MonoBehaviour
     
          Vector2 moveDir = new Vector2(x, 0).normalized;
     
-         rb.velocity = new Vector2(moveDir.x * moveSpeed * Time.deltaTime, rb.velocity.y);
+         rb.velocity = new Vector2(moveDir.x * moveSpeed, rb.velocity.y);
     
          if (Input.GetKeyDown(KeyCode.UpArrow))
          {
