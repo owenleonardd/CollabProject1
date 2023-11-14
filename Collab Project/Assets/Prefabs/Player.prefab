@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8851277289148026466}
   - component: {fileID: 8851277289148026465}
   - component: {fileID: 8851277289148026464}
-  - component: {fileID: 8851277289148026479}
+  - component: {fileID: -6908351544514482968}
   - component: {fileID: 8851277289148026478}
   m_Layer: 0
   m_Name: Player
@@ -108,7 +108,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 4
---- !u!61 &8851277289148026479
+--- !u!61 &-6908351544514482968
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -148,4 +148,3 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 5
   jumpForce: 400
-  switchCooldown: 0.5

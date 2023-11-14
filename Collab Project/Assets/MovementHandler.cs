@@ -29,7 +29,7 @@ public class MovementHandler : MonoBehaviour
         rb.AddForce(new Vector2(Input.GetAxisRaw("Horizontal"), 0).normalized * speed);
         if (Input.GetButtonDown("Jump") && IsGrounded())
         {
-            rb.AddForce(new Vector2(rb.velocity.x, jumpForce),ForceMode2D.Impulse);
+            rb.AddForce(new Vector2(0, jumpForce),ForceMode2D.Impulse);
         }
 
         rb.AddForce(new Vector2(-rb.velocity.x * 0.5f, 0));
@@ -49,7 +49,7 @@ public class MovementHandler : MonoBehaviour
     }
     private bool IsGrounded()
     {
-        return Physics2D.Raycast(transform.position, _currVector, 1.1f, LayerMask.GetMask("Ground"));
+        return Physics2D.Raycast(transform.position, _currVector, 1, LayerMask.GetMask("Ground"));
     }
     
 }
