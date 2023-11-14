@@ -7,6 +7,7 @@ public class MovementHandler : MonoBehaviour
     public float speed = 5f;
     public float jumpForce = 10f;
     private Vector2 _currVector;
+    private bool _canSwitch;
 
     private Rigidbody2D rb;
 
@@ -15,11 +16,16 @@ public class MovementHandler : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         _currVector = new Vector2(0, -1);
+        _canSwitch = true;
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (!_canSwitch)
+        {
+            _canSwitch = IsGrounded();
+        }
         rb.AddForce(new Vector2(Input.GetAxisRaw("Horizontal"), 0).normalized * speed);
         if (Input.GetButtonDown("Jump") && IsGrounded())
         {
@@ -28,7 +34,7 @@ public class MovementHandler : MonoBehaviour
 
         rb.AddForce(new Vector2(-rb.velocity.x * 0.5f, 0));
         
-        if (Input.GetButtonDown("Fire1") && IsGrounded())
+        if (Input.GetButtonDown("Fire1") && _canSwitch)
         {
             SwitchGravity();
         }
@@ -38,7 +44,8 @@ public class MovementHandler : MonoBehaviour
     {
         rb.gravityScale*= -1;
         _currVector *= -1;
-        jumpForce*=-1;
+        jumpForce *= -1;
+        _canSwitch = false;
     }
     private bool IsGrounded()
     {
