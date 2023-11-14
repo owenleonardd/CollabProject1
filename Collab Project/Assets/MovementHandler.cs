@@ -6,52 +6,50 @@ public class MovementHandler : MonoBehaviour
 {
     public float speed = 5f;
     public float jumpForce = 10f;
-    public float switchCooldown = 1f;
-    private Vector2 _currVector = new Vector2(0, -1);
-    private bool _canSwitchGravity = true;
+    private Vector2 _currVector;
+    private bool _canSwitch;
 
     private Rigidbody2D rb;
-    private float _timeSinceLastSwitch = 0;
 
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        _currVector = new Vector2(0, -1);
+        _canSwitch = true;
     }
 
     // Update is called once per frame
     void Update()
     {
-        _timeSinceLastSwitch += Time.deltaTime;
-        if (_timeSinceLastSwitch >= switchCooldown || IsGrounded())
+        if (!_canSwitch)
         {
-            _canSwitchGravity = true;
+            _canSwitch = IsGrounded();
         }
-        rb.AddForce(new Vector2(Input.GetAxisRaw("Horizontal") * speed, 0));
+        rb.AddForce(new Vector2(Input.GetAxisRaw("Horizontal"), 0).normalized * speed);
         if (Input.GetButtonDown("Jump") && IsGrounded())
         {
-            rb.AddForce(new Vector2(rb.velocity.x, jumpForce));
+            rb.AddForce(new Vector2(0, jumpForce),ForceMode2D.Impulse);
         }
 
         rb.AddForce(new Vector2(-rb.velocity.x * 0.5f, 0));
         
-        if (Input.GetButtonDown("Fire1") && _canSwitchGravity)
+        if (Input.GetButtonDown("Fire1") && _canSwitch)
         {
-            switchGravity();
+            SwitchGravity();
         }
     }
 
-    private void switchGravity()
+    private void SwitchGravity()
     {
         rb.gravityScale*= -1;
         _currVector *= -1;
-        jumpForce*=-1;
-        _canSwitchGravity = false;
-        _timeSinceLastSwitch = 0;
+        jumpForce *= -1;
+        _canSwitch = false;
     }
     private bool IsGrounded()
     {
-        return Physics2D.Raycast(transform.position, _currVector, 1.1f, LayerMask.GetMask("Ground"));
+        return Physics2D.Raycast(transform.position, _currVector, 1, LayerMask.GetMask("Ground"));
     }
     
 }
