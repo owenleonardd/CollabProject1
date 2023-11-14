@@ -27,7 +27,7 @@ public class MovementHandler : MonoBehaviour
         {
             _canSwitchGravity = true;
         }
-        rb.AddForce(new Vector2(Input.GetAxisRaw("Horizontal") * speed, 0));
+        rb.AddForce(new Vector2(Input.GetAxisRaw("Horizontal"), 0).normalized * speed);
         if (Input.GetButtonDown("Jump") && IsGrounded())
         {
             rb.AddForce(new Vector2(rb.velocity.x, jumpForce));
