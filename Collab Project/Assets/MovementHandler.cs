@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -26,7 +27,7 @@ public class MovementHandler : MonoBehaviour
         {
             _canSwitch = IsGrounded();
         }
-        rb.AddForce(new Vector2(Input.GetAxisRaw("Horizontal"), 0).normalized * speed);
+        
         if (Input.GetButtonDown("Jump") && IsGrounded())
         {
             rb.AddForce(new Vector2(0, jumpForce),ForceMode2D.Impulse);
@@ -38,6 +39,11 @@ public class MovementHandler : MonoBehaviour
         {
             SwitchGravity();
         }
+    }
+
+    private void FixedUpdate()
+    {
+        rb.AddForce(new Vector2(Input.GetAxisRaw("Horizontal"), 0) * speed);
     }
 
     private void SwitchGravity()
