@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 1d3b5c1cc4159064cb9775faadfae084
+guid: a4e54d1473c33d945af2e8b5ba6effe6
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -47,7 +47,7 @@ TextureImporter:
   spriteMeshType: 0
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 32
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -68,9 +68,21 @@ TextureImporter:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
-    resizeAlgorithm: 1
+    resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -101,164 +113,131 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 1
-    textureFormat: -1
-    textureCompression: 0
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Cute-GSlime-Walk_0
+      name: tilemapP2_0
       rect:
         serializedVersion: 2
-        x: 52
-        y: 16
-        width: 23
-        height: 15
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 1
+        y: 84
+        width: 16
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8bc3f10db744e7440aa192f7cad4e33a
-      internalID: -159020393
+      spriteID: cb5c3f1c23c793743ab0600dd8b1951a
+      internalID: -1284013236
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cute-GSlime-Walk_1
+      name: tilemapP2_1
       rect:
         serializedVersion: 2
-        x: 180
-        y: 16
-        width: 23
-        height: 15
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 1
+        y: 69
+        width: 16
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b287973f122f22443b3156459e1c1033
-      internalID: -189163352
+      spriteID: 76bff1fc1eac2d547a1070075b52e2a5
+      internalID: 1654959492
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cute-GSlime-Walk_2
+      name: tilemapP2_2
       rect:
         serializedVersion: 2
-        x: 307
-        y: 16
-        width: 25
-        height: 13
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 1
+        y: 53
+        width: 16
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 73505ed93a9e7dd4e86ba551fb3220e9
-      internalID: -1985098959
+      spriteID: 3eb88e58f1ecb7c48bc9d21c8fa22ebb
+      internalID: -2041506184
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cute-GSlime-Walk_3
+      name: tilemapP2_3
       rect:
         serializedVersion: 2
-        x: 434
-        y: 16
-        width: 27
-        height: 12
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 1
+        y: 36
+        width: 16
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 58395b9a90f463a4c8e91eb8bd1e51cd
-      internalID: 1336621839
+      spriteID: 530f6348b2c7fd9419e6ee0040e772cd
+      internalID: -641175453
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cute-GSlime-Walk_4
+      name: tilemapP2_4
       rect:
         serializedVersion: 2
-        x: 561
-        y: 16
-        width: 29
-        height: 10
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 1
+        y: 21
+        width: 16
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3a65e127324fa58468208367cdb3e793
-      internalID: -866289866
+      spriteID: 66229044adbc19e44b2001d83548a172
+      internalID: 1963793859
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cute-GSlime-Walk_5
+      name: tilemapP2_5
       rect:
         serializedVersion: 2
-        x: 690
-        y: 16
-        width: 27
-        height: 12
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 1
+        y: 5
+        width: 16
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ad0f4761972c99442ad3f9ecc770aba1
-      internalID: -1721669611
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Cute-GSlime-Walk_6
-      rect:
-        serializedVersion: 2
-        x: 819
-        y: 16
-        width: 25
-        height: 13
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: bd99c8f299f8afe4dbe016a8f7eef0bb
-      internalID: 547620008
+      spriteID: a770733800336f54da79cf15351d0613
+      internalID: -1076004312
       vertices: []
       indices: 
       edges: []
@@ -274,14 +253,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Cute-GSlime-Walk_0: -159020393
-      Cute-GSlime-Walk_1: -189163352
-      Cute-GSlime-Walk_2: -1985098959
-      Cute-GSlime-Walk_3: 1336621839
-      Cute-GSlime-Walk_4: -866289866
-      Cute-GSlime-Walk_5: -1721669611
-      Cute-GSlime-Walk_6: 547620008
-      Slime_Walk_0: 2088416416
+      tilemapP2_0: -1284013236
+      tilemapP2_1: 1654959492
+      tilemapP2_2: -2041506184
+      tilemapP2_3: -641175453
+      tilemapP2_4: 1963793859
+      tilemapP2_5: -1076004312
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
