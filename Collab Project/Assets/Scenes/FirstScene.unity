@@ -446,6 +446,26 @@ PrefabInstance:
       propertyPath: m_SpriteTilingProperty.oldSize.y
       value: 0.46875
       objectReference: {fileID: 0}
+    - target: {fileID: 8851277289148026464, guid: a977ce1e47e270841923bb5ba9dd0764, type: 3}
+      propertyPath: m_LinearDrag
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 8851277289148026464, guid: a977ce1e47e270841923bb5ba9dd0764, type: 3}
+      propertyPath: m_Constraints
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8851277289148026464, guid: a977ce1e47e270841923bb5ba9dd0764, type: 3}
+      propertyPath: m_Interpolate
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8851277289148026464, guid: a977ce1e47e270841923bb5ba9dd0764, type: 3}
+      propertyPath: m_GravityScale
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8851277289148026464, guid: a977ce1e47e270841923bb5ba9dd0764, type: 3}
+      propertyPath: m_CollisionDetection
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8851277289148026465, guid: a977ce1e47e270841923bb5ba9dd0764, type: 3}
       propertyPath: m_Enabled
       value: 1
@@ -497,6 +517,22 @@ PrefabInstance:
     - target: {fileID: 8851277289148026477, guid: a977ce1e47e270841923bb5ba9dd0764, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 8851277289148026478, guid: a977ce1e47e270841923bb5ba9dd0764, type: 3}
+      propertyPath: speed
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8851277289148026478, guid: a977ce1e47e270841923bb5ba9dd0764, type: 3}
+      propertyPath: jumpForce
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 8851277289148026478, guid: a977ce1e47e270841923bb5ba9dd0764, type: 3}
+      propertyPath: groundCheck
+      value: 
+      objectReference: {fileID: 1647759224}
+    - target: {fileID: 8851277289148026478, guid: a977ce1e47e270841923bb5ba9dd0764, type: 3}
+      propertyPath: groundMask.m_Bits
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a977ce1e47e270841923bb5ba9dd0764, type: 3}
@@ -1245,7 +1281,7 @@ GameObject:
   - component: {fileID: 1400359040}
   m_Layer: 3
   m_Name: GroundTilemap
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

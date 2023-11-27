@@ -7,55 +7,56 @@ public class MovementHandler : MonoBehaviour
 {
     public float speed = 5f;
     public float jumpForce = 10f;
-    private Vector2 _currVector;
-    private bool _canSwitch;
-
-    private Rigidbody2D rb;
-
-    // Start is called before the first frame update
-    void Start()
+    
+    private Rigidbody2D _rigidbody2D;
+    private bool _isGrounded;
+    
+    private void Awake()
     {
-        rb = GetComponent<Rigidbody2D>();
-        _currVector = new Vector2(0, -1);
-        _canSwitch = true;
+        _rigidbody2D = GetComponent<Rigidbody2D>();
     }
-
-    // Update is called once per frame
-    void Update()
+    
+    private void Update()
     {
-        if (!_canSwitch)
+        if (Input.GetKeyDown(KeyCode.Space) && _isGrounded)
         {
-            _canSwitch = IsGrounded();
+            _rigidbody2D.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
         }
         
-        if (Input.GetButtonDown("Jump") && IsGrounded())
-        {
-            rb.AddForce(new Vector2(0, jumpForce),ForceMode2D.Impulse);
-        }
-
-        rb.AddForce(new Vector2(-rb.velocity.x * 0.5f, 0));
-        
-        if (Input.GetButtonDown("Fire1") && _canSwitch)
+        if (Input.GetButtonDown("Fire1"))
         {
             SwitchGravity();
+            
         }
     }
-
+    
     private void FixedUpdate()
     {
-        rb.AddForce(new Vector2(Input.GetAxisRaw("Horizontal"), 0) * speed);
+        float horizontalInput = Input.GetAxis("Horizontal");
+        _rigidbody2D.velocity = new Vector2(horizontalInput * speed, _rigidbody2D.velocity.y);
     }
-
+    
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+        if (other.gameObject.CompareTag("Ground"))
+        {
+            _isGrounded = true;
+        }
+    }
+    
+    private void OnCollisionExit2D(Collision2D other)
+    {
+        if (other.gameObject.CompareTag("Ground"))
+        {
+            _isGrounded = false;
+        }
+    }
+    
     private void SwitchGravity()
     {
-        rb.gravityScale*= -1;
-        _currVector *= -1;
+        _rigidbody2D.gravityScale *= -1;
         jumpForce *= -1;
-        _canSwitch = false;
-    }
-    private bool IsGrounded()
-    {
-        return Physics2D.Raycast(transform.position, _currVector, 1, LayerMask.GetMask("Ground"));
+        transform.Rotate(0f, 0f, 180f);
     }
     
 }
