@@ -22,19 +22,23 @@ public class EnemyWalk : MonoBehaviour
     {
         while (true)
         {
-            transform.localScale = new Vector3(-transform.localScale.x, transform.localScale.y, transform.localScale.z);
+            var transform1 = transform;
+            var localScale = transform1.localScale;
+            localScale = new Vector3(-localScale.x, localScale.y, localScale.z);
+            transform1.localScale = localScale;
             float distanceWalked = 0f;
-            while (distanceWalked < maxWalkDistance)
+            while (System.Math.Abs(distanceWalked) < maxWalkDistance)
             {
                 transform.position += new Vector3(speed * Time.deltaTime, 0f, 0f);
                 distanceWalked += speed * Time.deltaTime;
-                if(transform.localScale.x < 0 && Physics2D.Raycast(transform.position, Vector2.right*speed, 0.5f, LayerMask.GetMask("Ground")))
+                if(Physics2D.Raycast(transform.position, Vector2.right*speed, 0.5f, LayerMask.GetMask("Ground")))
                 {
                     speed *= -1;
                 }
                 yield return null;
             }
-            yield return new WaitForSeconds(1f);
+            speed *= -1;
+            yield return new WaitForSeconds(0.1f);
         }
     }
 }

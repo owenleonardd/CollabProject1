@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class MovementHandler : MonoBehaviour
 {
@@ -56,7 +57,18 @@ public class MovementHandler : MonoBehaviour
     {
         _rigidbody2D.gravityScale *= -1;
         jumpForce *= -1;
-        transform.Rotate(0f, 0f, 180f);
+        StartCoroutine(Rotate());
+    }
+    
+    private IEnumerator Rotate()
+    {
+        float time = 0f;
+        while (time < 1f)
+        {
+            transform.Rotate(0f, 0f, 180f * Time.deltaTime);
+            time += Time.deltaTime;
+            yield return null;
+        }
     }
     
 }
