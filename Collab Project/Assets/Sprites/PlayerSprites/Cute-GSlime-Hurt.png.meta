@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 25fc535d250ba1d42be691937407cdbb
+guid: d4993654b396d4041a27b6aa7781233b
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -45,8 +45,8 @@ TextureImporter:
   spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 0
-  alignment: 0
-  spritePivot: {x: 0.5, y: 0.5}
+  alignment: 7
+  spritePivot: {x: 0.5, y: 0}
   spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
@@ -113,11 +113,35 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Cute-GSlime-Jump_0
+      name: Cute-GSlime-Hurt_0
       rect:
         serializedVersion: 2
         x: 52
@@ -131,17 +155,38 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4f5eab2bf3a3ab54395f3f837854da1e
-      internalID: -63989349
+      spriteID: 6e8a38bbc917a1f4aaf6f5784d5e02d2
+      internalID: 406627188
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cute-GSlime-Jump_1
+      name: Cute-GSlime-Hurt_1
       rect:
         serializedVersion: 2
-        x: 179
+        x: 180
+        y: 16
+        width: 23
+        height: 15
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8204bac532c8a114b8911ed77208cf3a
+      internalID: -1955477261
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cute-GSlime-Hurt_2
+      rect:
+        serializedVersion: 2
+        x: 307
         y: 16
         width: 25
         height: 13
@@ -152,20 +197,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8773786af859b0d469da046041f68634
-      internalID: -423805171
+      spriteID: c2f4d1f0403a28742b7cf914be3bd267
+      internalID: -1014342007
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cute-GSlime-Jump_2
+      name: Cute-GSlime-Hurt_3
       rect:
         serializedVersion: 2
-        x: 306
+        x: 435
         y: 16
-        width: 27
-        height: 12
+        width: 25
+        height: 13
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -173,20 +218,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5437a90b62ef49742b239039a83a32d3
-      internalID: -1347302849
+      spriteID: ab1a5e8a03a55fe44ba2551146427865
+      internalID: -881634190
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cute-GSlime-Jump_3
+      name: Cute-GSlime-Hurt_4
       rect:
         serializedVersion: 2
-        x: 433
+        x: 563
         y: 16
-        width: 29
-        height: 10
+        width: 25
+        height: 13
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -194,20 +239,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 00c3b9b7cfae8c241881d5192b1c8edf
-      internalID: 2064085723
+      spriteID: 8ef4d7f76161c874fb72f3b4e9c83a27
+      internalID: 932881851
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cute-GSlime-Jump_4
+      name: Cute-GSlime-Hurt_5
       rect:
         serializedVersion: 2
-        x: 566
-        y: 19
-        width: 19
-        height: 17
+        x: 691
+        y: 16
+        width: 25
+        height: 13
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -215,71 +260,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2d5433c150d2d6341b395d17d3191bae
-      internalID: 1372512151
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Cute-GSlime-Jump_5
-      rect:
-        serializedVersion: 2
-        x: 696
-        y: 21
-        width: 15
-        height: 18
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 263e050e5eee1c34795093fcb096139c
-      internalID: 904627391
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Cute-GSlime-Jump_6
-      rect:
-        serializedVersion: 2
-        x: 824
-        y: 23
-        width: 15
-        height: 18
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9ca8805fe2a4ae94581ddb9219e74c0f
-      internalID: 571117187
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Cute-GSlime-Jump_7
-      rect:
-        serializedVersion: 2
-        x: 950
-        y: 19
-        width: 19
-        height: 17
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a72d9012a02e4304e9f3f8ad665f0042
-      internalID: -1207303704
+      spriteID: 9c1f10cd37bace747b2bf6725b1b7fed
+      internalID: -1438747824
       vertices: []
       indices: 
       edges: []
@@ -295,14 +277,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Cute-GSlime-Jump_0: -63989349
-      Cute-GSlime-Jump_1: -423805171
-      Cute-GSlime-Jump_2: -1347302849
-      Cute-GSlime-Jump_3: 2064085723
-      Cute-GSlime-Jump_4: 1372512151
-      Cute-GSlime-Jump_5: 904627391
-      Cute-GSlime-Jump_6: 571117187
-      Cute-GSlime-Jump_7: -1207303704
+      Cute-GSlime-Hurt_0: 406627188
+      Cute-GSlime-Hurt_1: -1955477261
+      Cute-GSlime-Hurt_2: -1014342007
+      Cute-GSlime-Hurt_3: -881634190
+      Cute-GSlime-Hurt_4: 932881851
+      Cute-GSlime-Hurt_5: -1438747824
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

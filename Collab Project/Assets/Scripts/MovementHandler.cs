@@ -11,10 +11,13 @@ public class MovementHandler : MonoBehaviour
     
     private Rigidbody2D _rigidbody2D;
     private bool _isGrounded;
-    
+
+    private Animator anim;
+
     private void Awake()
     {
         _rigidbody2D = GetComponent<Rigidbody2D>();
+        anim = GetComponent<Animator>();
     }
     
     private void Update()
@@ -22,6 +25,11 @@ public class MovementHandler : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space) && _isGrounded)
         {
             _rigidbody2D.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
+            anim.SetBool("jumping", true);
+        }
+        else
+        {
+            anim.SetBool("jumping", false);
         }
         
         if (Input.GetButtonDown("Fire1"))

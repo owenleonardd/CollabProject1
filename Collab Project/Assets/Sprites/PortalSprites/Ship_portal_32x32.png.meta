@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 63eafb5cd6efee04a8121c8e29774e69
+guid: cdd20f24619e59a41958d3fc752cf9bb
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -47,7 +47,7 @@ TextureImporter:
   spriteMeshType: 0
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 32
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -78,18 +78,6 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
     buildTarget: Standalone
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -113,194 +101,197 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Cute-GSlime-Dead_0
+      name: Ship_portal_32x32_0
       rect:
         serializedVersion: 2
-        x: 52
-        y: 16
-        width: 23
-        height: 15
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 0
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 124f814141c75b747b6331494a5516d8
-      internalID: 500848398
+      spriteID: 857cd2c0c7f19d640a2516e3e77698af
+      internalID: 264258298
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cute-GSlime-Dead_1
+      name: Ship_portal_32x32_1
       rect:
         serializedVersion: 2
-        x: 178
-        y: 16
-        width: 27
-        height: 12
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 32
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ea1eef368b589e84086f6fcae1b2b05b
-      internalID: 713570816
+      spriteID: 410e7174470596349871817d53dbfe8f
+      internalID: -1873146288
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cute-GSlime-Dead_2
+      name: Ship_portal_32x32_2
       rect:
         serializedVersion: 2
-        x: 306
-        y: 16
-        width: 27
-        height: 12
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 64
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 55b3c2414f248884aa4106e9fc7474d5
-      internalID: -2128215040
+      spriteID: 2b07e9718af921f49b48566102dd9a7e
+      internalID: 529730567
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cute-GSlime-Dead_3
+      name: Ship_portal_32x32_3
       rect:
         serializedVersion: 2
-        x: 430
-        y: 16
-        width: 35
-        height: 13
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 96
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cc506b64532c36e40994688a142a626c
-      internalID: 671774016
+      spriteID: b91a1f538c2c5fa4d93c4559c28d60a9
+      internalID: -906242030
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cute-GSlime-Dead_4
+      name: Ship_portal_32x32_4
       rect:
         serializedVersion: 2
-        x: 554
-        y: 16
-        width: 42
-        height: 16
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 128
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 138868b375d36094ea3b7386ba1377af
-      internalID: 1517615415
+      spriteID: cb61c8dc168ddc246bab96267995b9e7
+      internalID: 824725028
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cute-GSlime-Dead_5
+      name: Ship_portal_32x32_5
       rect:
         serializedVersion: 2
-        x: 685
-        y: 16
-        width: 37
-        height: 16
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 160
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d1355f1b10e40744ebb8107574721f77
-      internalID: -1154174039
+      spriteID: 36254f504fb6eab498c221854604499f
+      internalID: -1980025310
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cute-GSlime-Dead_6
+      name: Ship_portal_32x32_6
       rect:
         serializedVersion: 2
-        x: 824
-        y: 16
-        width: 17
-        height: 6
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 192
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7753d7823301c414186211bad21e044f
-      internalID: 1547666856
+      spriteID: 1435575d80a280c49aaa9b0dc0ef9091
+      internalID: 1733495812
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cute-GSlime-Dead_7
+      name: Ship_portal_32x32_7
       rect:
         serializedVersion: 2
-        x: 952
-        y: 16
-        width: 23
-        height: 12
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 224
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cabe85eacaca9794e8c34b041af63b57
-      internalID: 313331047
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Cute-GSlime-Dead_8
-      rect:
-        serializedVersion: 2
-        x: 1076
-        y: 16
-        width: 29
-        height: 12
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3ad543fe49424524799942cf215a615f
-      internalID: -265944910
+      spriteID: d77f2bb94e818764cba768fd1ac97e02
+      internalID: 770649536
       vertices: []
       indices: 
       edges: []
@@ -316,15 +307,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Cute-GSlime-Dead_0: 741488469
-      Cute-GSlime-Dead_1: 500848398
-      Cute-GSlime-Dead_2: 1191548887
-      Cute-GSlime-Dead_3: 713570816
-      Cute-GSlime-Dead_4: -2128215040
-      Cute-GSlime-Dead_5: 671774016
-      Cute-GSlime-Dead_6: 1517615415
-      Cute-GSlime-Dead_7: -1154174039
-      Cute-GSlime-Dead_8: 1547666856
+      Ship_portal_32x32_0: 264258298
+      Ship_portal_32x32_1: -1873146288
+      Ship_portal_32x32_2: 529730567
+      Ship_portal_32x32_3: -906242030
+      Ship_portal_32x32_4: 824725028
+      Ship_portal_32x32_5: -1980025310
+      Ship_portal_32x32_6: 1733495812
+      Ship_portal_32x32_7: 770649536
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
