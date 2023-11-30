@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 25fc535d250ba1d42be691937407cdbb
+guid: 63eafb5cd6efee04a8121c8e29774e69
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -113,11 +113,35 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Cute-GSlime-Jump_0
+      name: Cute-GSlime-Dead_0
       rect:
         serializedVersion: 2
         x: 52
@@ -131,20 +155,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4f5eab2bf3a3ab54395f3f837854da1e
-      internalID: -63989349
+      spriteID: 124f814141c75b747b6331494a5516d8
+      internalID: 500848398
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cute-GSlime-Jump_1
+      name: Cute-GSlime-Dead_1
       rect:
         serializedVersion: 2
-        x: 179
+        x: 178
         y: 16
-        width: 25
-        height: 13
+        width: 27
+        height: 12
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -152,14 +176,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8773786af859b0d469da046041f68634
-      internalID: -423805171
+      spriteID: ea1eef368b589e84086f6fcae1b2b05b
+      internalID: 713570816
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cute-GSlime-Jump_2
+      name: Cute-GSlime-Dead_2
       rect:
         serializedVersion: 2
         x: 306
@@ -173,20 +197,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5437a90b62ef49742b239039a83a32d3
-      internalID: -1347302849
+      spriteID: 55b3c2414f248884aa4106e9fc7474d5
+      internalID: -2128215040
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cute-GSlime-Jump_3
+      name: Cute-GSlime-Dead_3
       rect:
         serializedVersion: 2
-        x: 433
+        x: 430
         y: 16
-        width: 29
-        height: 10
+        width: 35
+        height: 13
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -194,20 +218,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 00c3b9b7cfae8c241881d5192b1c8edf
-      internalID: 2064085723
+      spriteID: cc506b64532c36e40994688a142a626c
+      internalID: 671774016
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cute-GSlime-Jump_4
+      name: Cute-GSlime-Dead_4
       rect:
         serializedVersion: 2
-        x: 566
-        y: 19
-        width: 19
-        height: 17
+        x: 554
+        y: 16
+        width: 42
+        height: 16
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -215,20 +239,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2d5433c150d2d6341b395d17d3191bae
-      internalID: 1372512151
+      spriteID: 138868b375d36094ea3b7386ba1377af
+      internalID: 1517615415
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cute-GSlime-Jump_5
+      name: Cute-GSlime-Dead_5
       rect:
         serializedVersion: 2
-        x: 696
-        y: 21
-        width: 15
-        height: 18
+        x: 685
+        y: 16
+        width: 37
+        height: 16
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -236,20 +260,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 263e050e5eee1c34795093fcb096139c
-      internalID: 904627391
+      spriteID: d1355f1b10e40744ebb8107574721f77
+      internalID: -1154174039
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cute-GSlime-Jump_6
+      name: Cute-GSlime-Dead_6
       rect:
         serializedVersion: 2
         x: 824
-        y: 23
-        width: 15
-        height: 18
+        y: 16
+        width: 17
+        height: 6
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -257,20 +281,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9ca8805fe2a4ae94581ddb9219e74c0f
-      internalID: 571117187
+      spriteID: 7753d7823301c414186211bad21e044f
+      internalID: 1547666856
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cute-GSlime-Jump_7
+      name: Cute-GSlime-Dead_7
       rect:
         serializedVersion: 2
-        x: 950
-        y: 19
-        width: 19
-        height: 17
+        x: 952
+        y: 16
+        width: 23
+        height: 12
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -278,8 +302,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a72d9012a02e4304e9f3f8ad665f0042
-      internalID: -1207303704
+      spriteID: cabe85eacaca9794e8c34b041af63b57
+      internalID: 313331047
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cute-GSlime-Dead_8
+      rect:
+        serializedVersion: 2
+        x: 1076
+        y: 16
+        width: 29
+        height: 12
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ad543fe49424524799942cf215a615f
+      internalID: -265944910
       vertices: []
       indices: 
       edges: []
@@ -295,14 +340,15 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Cute-GSlime-Jump_0: -63989349
-      Cute-GSlime-Jump_1: -423805171
-      Cute-GSlime-Jump_2: -1347302849
-      Cute-GSlime-Jump_3: 2064085723
-      Cute-GSlime-Jump_4: 1372512151
-      Cute-GSlime-Jump_5: 904627391
-      Cute-GSlime-Jump_6: 571117187
-      Cute-GSlime-Jump_7: -1207303704
+      Cute-GSlime-Dead_0: 741488469
+      Cute-GSlime-Dead_1: 500848398
+      Cute-GSlime-Dead_2: 1191548887
+      Cute-GSlime-Dead_3: 713570816
+      Cute-GSlime-Dead_4: -2128215040
+      Cute-GSlime-Dead_5: 671774016
+      Cute-GSlime-Dead_6: 1517615415
+      Cute-GSlime-Dead_7: -1154174039
+      Cute-GSlime-Dead_8: 1547666856
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
