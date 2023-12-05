@@ -125,6 +125,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 50
   jumpForce: 10
+  slimeTrail: {fileID: 0}
+  slimeTile: {fileID: 11400000, guid: 424e68faaba6da844a74c5b0375d255b, type: 2}
+  slimeTileRotated: {fileID: 11400000, guid: 65193519baa3e8e4480aaf632bcc6075, type: 2}
+  slimeMultiplier: 0
 --- !u!114 &7722469599926229342
 MonoBehaviour:
   m_ObjectHideFlags: 0
