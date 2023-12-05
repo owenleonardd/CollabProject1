@@ -123,8 +123,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1218ea016a8768043bf2e8fbafefc9bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 50
-  jumpForce: 10
+  speed: 8
+  jumpForce: 7
   slimeTrail: {fileID: 0}
   slimeTile: {fileID: 11400000, guid: 424e68faaba6da844a74c5b0375d255b, type: 2}
   slimeTileRotated: {fileID: 11400000, guid: 65193519baa3e8e4480aaf632bcc6075, type: 2}

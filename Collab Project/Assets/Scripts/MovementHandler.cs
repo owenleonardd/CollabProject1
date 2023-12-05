@@ -1,19 +1,18 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 using UnityEngine.UIElements;
 
 public class MovementHandler : MonoBehaviour
 {
-    public float speed = 5f;
-    public float jumpForce = 10f;
+    public float speed = 8f;
+    public float jumpForce = 7f;
     
-    public Tilemap slimeTrail;
+    private Tilemap slimeTrail,groundTilemap;
     public Tile slimeTile,slimeTileRotated;
-
-    private Tile _slimeTileRotated;
     private Rigidbody2D _rigidbody2D;
     private bool _isGrounded;
     
@@ -24,7 +23,8 @@ public class MovementHandler : MonoBehaviour
     {
         _rigidbody2D = GetComponent<Rigidbody2D>();
         _slimeTrailActive = false;
-
+        slimeTrail = GameObject.Find("Slime").GetComponent<Tilemap>();
+        groundTilemap = GameObject.Find("GroundTilemap").GetComponent<Tilemap>();
     }
     
     private void Update()
@@ -53,9 +53,9 @@ public class MovementHandler : MonoBehaviour
         if (_slimeTrailActive && _isGrounded)
         {
             //need to offset the tile row by 1 to get the correct tile
-            if(jumpForce > 0)
+            if(jumpForce > 0 && groundTilemap.HasTile(groundTilemap.WorldToCell(transform.position + new Vector3(0f, -1f, 0f))))
                 slimeTrail.SetTile(slimeTrail.WorldToCell(transform.position + new Vector3(0f, -1f, 0f)), slimeTile);
-            else
+            else if(groundTilemap.HasTile(groundTilemap.WorldToCell(transform.position + new Vector3(0f, 1f, 0f))))
                 slimeTrail.SetTile(slimeTrail.WorldToCell(transform.position + new Vector3(0f, 1f, 0f)), slimeTileRotated);
         }
     }
