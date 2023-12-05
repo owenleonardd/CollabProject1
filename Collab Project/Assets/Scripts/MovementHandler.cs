@@ -7,8 +7,8 @@ using UnityEngine.UIElements;
 
 public class MovementHandler : MonoBehaviour
 {
-    public float speed = 5f;
-    public float jumpForce = 10f;
+    public float speed = 8f;
+    public float jumpForce = 7f;
     
     public Tilemap slimeTrail;
     public Tile slimeTile,slimeTileRotated;
