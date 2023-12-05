@@ -531,6 +531,10 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8851277289148026478, guid: a977ce1e47e270841923bb5ba9dd0764, type: 3}
+      propertyPath: slimeTileRotated
+      value: 
+      objectReference: {fileID: 11400000, guid: 65193519baa3e8e4480aaf632bcc6075, type: 2}
+    - target: {fileID: 8851277289148026478, guid: a977ce1e47e270841923bb5ba9dd0764, type: 3}
       propertyPath: groundMask.m_Bits
       value: 8
       objectReference: {fileID: 0}

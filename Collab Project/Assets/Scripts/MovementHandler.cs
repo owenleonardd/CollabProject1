@@ -11,7 +11,7 @@ public class MovementHandler : MonoBehaviour
     public float jumpForce = 10f;
     
     public Tilemap slimeTrail;
-    public Tile slimeTile;
+    public Tile slimeTile,slimeTileRotated;
 
     private Tile _slimeTileRotated;
     private Rigidbody2D _rigidbody2D;
@@ -56,7 +56,7 @@ public class MovementHandler : MonoBehaviour
             if(jumpForce > 0)
                 slimeTrail.SetTile(slimeTrail.WorldToCell(transform.position + new Vector3(0f, -1f, 0f)), slimeTile);
             else
-                slimeTrail.SetTile(slimeTrail.WorldToCell(transform.position + new Vector3(0f, 1f, 0f)), slimeTile);
+                slimeTrail.SetTile(slimeTrail.WorldToCell(transform.position + new Vector3(0f, 1f, 0f)), slimeTileRotated);
         }
     }
     
@@ -99,6 +99,7 @@ public class MovementHandler : MonoBehaviour
         // speed *= -1;
         jumpForce *= -1;
         StartCoroutine(Rotate());
+        _isGrounded = false;
     }
     
     private IEnumerator Rotate()
