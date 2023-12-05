@@ -8,6 +8,7 @@ public class ObstacleButton : MonoBehaviour
     private TilemapRenderer obstacleTilemapRenderer;
     private TilemapCollider2D obstacleTilemapCollider;
     private bool playerInButton;
+    private IEnumerator coroutine;
     
     // Start is called before the first frame update
     void Start()
@@ -17,6 +18,12 @@ public class ObstacleButton : MonoBehaviour
         playerInButton = false;
     }
 
+    IEnumerator Wait()
+    {
+        new WaitForSeconds(5);
+        obstacleTilemapRenderer.enabled = true;
+        obstacleTilemapCollider.enabled = true;
+    }
     // Update is called once per frame
     void Update()
     {
@@ -24,6 +31,9 @@ public class ObstacleButton : MonoBehaviour
         {
             obstacleTilemapRenderer.enabled = false;
             obstacleTilemapCollider.enabled = false;
+            coroutine = Wait();
+            StartCoroutine(coroutine);
+            
         }
     }
 

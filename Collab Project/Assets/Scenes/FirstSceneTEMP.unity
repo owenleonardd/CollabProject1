@@ -670,7 +670,7 @@ Tilemap:
       - {fileID: 1271788208, guid: e5eec283faac0b041a356c18619c782e, type: 3}
       - {fileID: 1231365155, guid: e5eec283faac0b041a356c18619c782e, type: 3}
       - {fileID: 8579656, guid: e5eec283faac0b041a356c18619c782e, type: 3}
-      m_AnimationSpeed: 7
+      m_AnimationSpeed: 7.0000005
       m_AnimationTimeOffset: 0
       m_IsLooping: 1
   - first: {x: 6, y: -2, z: 0}
@@ -3931,6 +3931,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: button
       objectReference: {fileID: 0}
+    - target: {fileID: 3679673893361825558, guid: 74f14c1e084c37142a1d38f493b43687, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 262877648, guid: e5eec283faac0b041a356c18619c782e, type: 3}
     - target: {fileID: 7941753549082498261, guid: 74f14c1e084c37142a1d38f493b43687, type: 3}
       propertyPath: m_RootOrder
       value: 7
