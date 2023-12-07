@@ -44,12 +44,14 @@ public class ObstacleButton : MonoBehaviour
     private IEnumerator DisableObstacles()
     {
         buttonPressed = true;
-        obstacleTilemapRenderer.enabled = false;
-        obstacleTilemapCollider.enabled = false;
+        obstacleTilemapCollider.gameObject.SetActive(false);
+        // obstacleTilemapRenderer.enabled = false;
+        // obstacleTilemapCollider.enabled = false;
         buttonAnim.SetBool("buttonPressing", true);
         yield return new WaitForSeconds(5);
-        obstacleTilemapRenderer.enabled = true;
-        obstacleTilemapCollider.enabled = true;
+        obstacleTilemapCollider.gameObject.SetActive(true);
+        // obstacleTilemapRenderer.enabled = true;
+        // obstacleTilemapCollider.enabled = true;
         buttonAnim.SetBool("buttonPressing", false);
         buttonPressed = false;
     }
