@@ -32,7 +32,10 @@ public class NextLevel : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown("E") && playerInPortal)
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        if (Input.GetKeyDown(KeyCode.E) && playerInPortal)
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);   
+        }
+        
     }
 }
