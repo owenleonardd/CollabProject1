@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Serialization;
 using UnityEngine.Tilemaps;
 using UnityEngine.UIElements;
 
@@ -10,17 +11,25 @@ public class MovementHandler : MonoBehaviour
 {
     public float speed = 8f;
     public float jumpForce = 7f;
-    
+    public float slimeTrailCooldown = 10f;
+    public float slimeTrailDuration = 5f;
+    public float slimeSpeedMultiplier;
+
+    private float fasterSpeed;
+    private float originalSpeed;
     private Tilemap slimeTrail,groundTilemap;
     public Tile slimeTile,slimeTileRotated;
     private Rigidbody2D _rigidbody2D;
     private bool _isGrounded;
     
+    
     private bool _slimeTrailActive;
-    public float slimeMultiplier;
+    
 
     private void Awake()
     {
+        originalSpeed = speed;
+        fasterSpeed = speed * slimeSpeedMultiplier;
         _rigidbody2D = GetComponent<Rigidbody2D>();
         _slimeTrailActive = false;
         slimeTrail = GameObject.Find("Slime").GetComponent<Tilemap>();
@@ -42,7 +51,12 @@ public class MovementHandler : MonoBehaviour
         
         if (Input.GetButtonDown("Fire2"))
         {
-            _slimeTrailActive = !_slimeTrailActive;
+            if (!_slimeTrailActive)
+            {
+                StartCoroutine(DoSlimeTrail());
+                _slimeTrailActive = true;
+                StartCoroutine(DoSlimeTrailCooldown());
+            }
         }
     }
     
@@ -50,14 +64,6 @@ public class MovementHandler : MonoBehaviour
     {
         float horizontalInput = Input.GetAxis("Horizontal");
         _rigidbody2D.velocity = new Vector2(horizontalInput * speed, _rigidbody2D.velocity.y);
-        if (_slimeTrailActive && _isGrounded)
-        {
-            //need to offset the tile row by 1 to get the correct tile
-            if(jumpForce > 0 && groundTilemap.HasTile(groundTilemap.WorldToCell(transform.position + new Vector3(0f, -1f, 0f))))
-                slimeTrail.SetTile(slimeTrail.WorldToCell(transform.position + new Vector3(0f, -1f, 0f)), slimeTile);
-            else if(groundTilemap.HasTile(groundTilemap.WorldToCell(transform.position + new Vector3(0f, 1f, 0f))))
-                slimeTrail.SetTile(slimeTrail.WorldToCell(transform.position + new Vector3(0f, 1f, 0f)), slimeTileRotated);
-        }
     }
     
     private void OnCollisionEnter2D(Collision2D other)
@@ -68,11 +74,11 @@ public class MovementHandler : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
+    private void OnTriggerStay2D(Collider2D other)
     {
         if (other.gameObject.CompareTag("SlimeTrail"))
         {
-            speed *= slimeMultiplier;
+            speed = fasterSpeed;
         }
     }
     
@@ -81,7 +87,7 @@ public class MovementHandler : MonoBehaviour
     {
         if (other.gameObject.CompareTag("SlimeTrail"))
         {
-            speed /= slimeMultiplier;
+            speed = originalSpeed;
         }
     }
 
@@ -111,6 +117,34 @@ public class MovementHandler : MonoBehaviour
             time += Time.deltaTime;
             yield return null;
         }
+    }
+
+    private IEnumerator DoSlimeTrail()
+    {
+        float time = 0f;
+        while(time < slimeTrailDuration)
+        {
+            //need to offset the tile row by 1 to get the correct tile
+            if(jumpForce > 0 && groundTilemap.HasTile(groundTilemap.WorldToCell(transform.position + new Vector3(0f, -0.5f, 0f))))
+                slimeTrail.SetTile(slimeTrail.WorldToCell(transform.position + new Vector3(0f, -0.5f, 0f)), slimeTile);
+            else if(groundTilemap.HasTile(groundTilemap.WorldToCell(transform.position + new Vector3(0f, 0.5f, 0f))))
+                slimeTrail.SetTile(slimeTrail.WorldToCell(transform.position + new Vector3(0f, 0.5f, 0f)), slimeTileRotated);
+            time += Time.deltaTime;
+            yield return null;
+        }
+        slimeTrail.ClearAllTiles();
+        speed = originalSpeed;
+    }
+    
+    private IEnumerator DoSlimeTrailCooldown()
+    {
+        float time = 0f;
+        while(time < slimeTrailCooldown)
+        {
+            time += Time.deltaTime;
+            yield return null;
+        }
+        _slimeTrailActive = false;
     }
     
     
