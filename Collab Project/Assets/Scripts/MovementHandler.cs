@@ -13,7 +13,7 @@ public class MovementHandler : MonoBehaviour
     public float jumpForce = 7f;
     public float slimeTrailCooldown = 10f;
     public float slimeTrailDuration = 5f;
-    public float slimeSpeedMultiplier;
+    public float slimeSpeedMultiplier = 2f;
 
     private float fasterSpeed;
     private float originalSpeed;
@@ -21,6 +21,7 @@ public class MovementHandler : MonoBehaviour
     public Tile slimeTile,slimeTileRotated;
     private Rigidbody2D _rigidbody2D;
     private bool _isGrounded;
+    private bool _hasSwitchedGravity;
     
     
     private bool _slimeTrailActive;
@@ -32,18 +33,20 @@ public class MovementHandler : MonoBehaviour
         fasterSpeed = speed * slimeSpeedMultiplier;
         _rigidbody2D = GetComponent<Rigidbody2D>();
         _slimeTrailActive = false;
+        _isGrounded = true;
+        _hasSwitchedGravity = false;
         slimeTrail = GameObject.Find("Slime").GetComponent<Tilemap>();
         groundTilemap = GameObject.Find("GroundTilemap").GetComponent<Tilemap>();
     }
     
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space) && _isGrounded)
+        if (Input.GetButtonDown("Vertical")&& _isGrounded)
         {
             _rigidbody2D.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
         }
         
-        if (Input.GetButtonDown("Fire1") && _isGrounded)
+        if (Input.GetButtonDown("Fire1") && !_hasSwitchedGravity)
         {
             SwitchGravity();
             
@@ -71,6 +74,7 @@ public class MovementHandler : MonoBehaviour
         if (other.gameObject.CompareTag("Ground"))
         {
             _isGrounded = true;
+            _hasSwitchedGravity = false;
         }
     }
 
@@ -106,14 +110,15 @@ public class MovementHandler : MonoBehaviour
         jumpForce *= -1;
         StartCoroutine(Rotate());
         _isGrounded = false;
+        _hasSwitchedGravity = true;
     }
     
     private IEnumerator Rotate()
     {
         float time = 0f;
-        while (time < 1f)
+        while (time < 0.5f)
         {
-            transform.Rotate(0f, 0f, 180f * Time.deltaTime);
+            transform.Rotate(0f, 0f, 360f * Time.deltaTime);
             time += Time.deltaTime;
             yield return null;
         }
