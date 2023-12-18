@@ -46,7 +46,7 @@ public class MovementHandler : MonoBehaviour
             _rigidbody2D.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
         }
         
-        if (Input.GetButtonDown("Fire1") && !_hasSwitchedGravity)
+        if (Input.GetKeyDown(KeyCode.Space) && !_hasSwitchedGravity)
         {
             SwitchGravity();
             

@@ -48,11 +48,14 @@ public class ObstacleButton : MonoBehaviour
         // obstacleTilemapRenderer.enabled = false;
         // obstacleTilemapCollider.enabled = false;
         buttonAnim.SetBool("buttonPressing", true);
+        buttonAnim.Play("ButtonPress");
+        buttonAnim.StopPlayback();
         yield return new WaitForSeconds(5);
+        
+        buttonAnim.SetBool("buttonPressing", false);
         obstacleTilemapCollider.gameObject.SetActive(true);
         // obstacleTilemapRenderer.enabled = true;
         // obstacleTilemapCollider.enabled = true;
-        buttonAnim.SetBool("buttonPressing", false);
         buttonPressed = false;
     }
 
