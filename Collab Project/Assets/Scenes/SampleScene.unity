@@ -2893,6 +2893,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Portal (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 4825737329854909260, guid: d37fc13c12c38df4da55aee706f50e7c, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d37fc13c12c38df4da55aee706f50e7c, type: 3}
 --- !u!1 &1325774344
