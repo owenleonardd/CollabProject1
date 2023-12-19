@@ -21,7 +21,7 @@
             {
                 "type": "System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089",
                 "key": "buildOutputDirList",
-                "value": "{\"m_Value\":\"C:/Users/100027205/Documents/GitHub/CollabProject1/Collab Project/WebGL Builds/v2;C:/Users/100028058/Documents/GitHub/CollabProject1/Collab Project/WebGL Builds;;;;;;;;\"}"
+                "value": "{\"m_Value\":\"C:/Users/100027205/Documents/GitHub/CollabProject1/Collab Project/WebGL Builds/v3;C:/Users/100027205/Documents/GitHub/CollabProject1/Collab Project/WebGL Builds/v2;C:/Users/100028058/Documents/GitHub/CollabProject1/Collab Project/WebGL Builds;;;;;;;\"}"
             }
         ]
     }
