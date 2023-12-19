@@ -8,18 +8,18 @@ public class TextFloat : MonoBehaviour
     public float floatStrength = 1;
     public float floatSpeed = 1;
     private float originalY;
+    private RectTransform _transform;
+    
     void Start()
     {
-        this.originalY = this.transform.position.y;
+        _transform = GetComponent<RectTransform>();
+        this.originalY = _transform.position.y;
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        var position = transform.position;
-        position = new Vector3(position.x,
-            originalY + ((float)Mathf.Sin(Time.time * floatSpeed) * floatStrength),
-            position.z);
-        transform.position = position;
+        _transform.position += Vector3.up * (Mathf.Sin(Time.time * floatSpeed) * floatStrength);
     }
 }
