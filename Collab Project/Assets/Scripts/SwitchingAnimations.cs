@@ -18,18 +18,13 @@ public class SwitchingAnimations : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.RightArrow))
+        if (Input.GetAxisRaw("Horizontal") > 0)
         {
-            anim.SetBool("movingRight", true);
+            anim.SetBool("facingRight", true);
         }
-        else if (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.LeftArrow))
+        else if (Input.GetAxisRaw("Horizontal") < 0)
         {
-            anim.SetBool("movingLeft", true);
-        }
-        else
-        {
-            anim.SetBool("movingLeft", false);
-            anim.SetBool("movingRight", false);
+            anim.SetBool("facingRight", false);
         }
     }
 }

@@ -673,7 +673,7 @@ Tilemap:
       - {fileID: 1271788208, guid: e5eec283faac0b041a356c18619c782e, type: 3}
       - {fileID: 1231365155, guid: e5eec283faac0b041a356c18619c782e, type: 3}
       - {fileID: 8579656, guid: e5eec283faac0b041a356c18619c782e, type: 3}
-      m_AnimationSpeed: 7
+      m_AnimationSpeed: 7.0000005
       m_AnimationTimeOffset: 0
       m_IsLooping: 1
   - first: {x: 0, y: -4, z: 0}
@@ -682,7 +682,7 @@ Tilemap:
       - {fileID: 1271788208, guid: e5eec283faac0b041a356c18619c782e, type: 3}
       - {fileID: 1231365155, guid: e5eec283faac0b041a356c18619c782e, type: 3}
       - {fileID: 8579656, guid: e5eec283faac0b041a356c18619c782e, type: 3}
-      m_AnimationSpeed: 7
+      m_AnimationSpeed: 7.0000005
       m_AnimationTimeOffset: 0
       m_IsLooping: 1
   - first: {x: 1, y: -4, z: 0}
@@ -1069,6 +1069,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 7722469599926229342, guid: a977ce1e47e270841923bb5ba9dd0764, type: 3}
+      propertyPath: uiElement
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 8851277289148026466, guid: a977ce1e47e270841923bb5ba9dd0764, type: 3}
       propertyPath: m_RootOrder
       value: 10

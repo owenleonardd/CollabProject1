@@ -22,6 +22,7 @@ public class MovementHandler : MonoBehaviour
     private Rigidbody2D _rigidbody2D;
     private bool _isGrounded;
     private bool _hasSwitchedGravity;
+    private Animator anim;
     
     
     private bool _slimeTrailActive;
@@ -29,6 +30,7 @@ public class MovementHandler : MonoBehaviour
 
     private void Awake()
     {
+        anim = GetComponent<Animator>();
         originalSpeed = speed;
         fasterSpeed = speed * slimeSpeedMultiplier;
         _rigidbody2D = GetComponent<Rigidbody2D>();
@@ -41,12 +43,12 @@ public class MovementHandler : MonoBehaviour
     
     private void Update()
     {
-        if (Input.GetButtonDown("Vertical")&& _isGrounded)
+        if (Input.GetKeyDown(KeyCode.Space)&& _isGrounded)
         {
             _rigidbody2D.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
         }
         
-        if (Input.GetKeyDown(KeyCode.Space) && !_hasSwitchedGravity)
+        if (Input.GetButtonDown("Fire1") && !_hasSwitchedGravity)
         {
             SwitchGravity();
             
@@ -60,6 +62,15 @@ public class MovementHandler : MonoBehaviour
                 _slimeTrailActive = true;
                 StartCoroutine(DoSlimeTrailCooldown());
             }
+        }
+        
+        if ((jumpForce*Input.GetAxisRaw("Horizontal")) > 0)
+        {
+            anim.SetBool("facingRight", true);
+        }
+        else if ((jumpForce*Input.GetAxisRaw("Horizontal")) < 0)
+        {
+            anim.SetBool("facingRight", false);
         }
     }
     

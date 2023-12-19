@@ -8,6 +8,7 @@ public class CollisionHandler : MonoBehaviour
 {
     // Start is called before the first frame update
     public int minY;
+    
 
     private void Start()
     {

@@ -49,7 +49,7 @@ public class ObstacleButton : MonoBehaviour
         // obstacleTilemapCollider.enabled = false;
         buttonAnim.SetBool("buttonPressing", true);
         buttonAnim.Play("ButtonPress");
-        buttonAnim.StopPlayback();
+        buttonAnim.StopPlayback(); 
         yield return new WaitForSeconds(5);
         
         buttonAnim.SetBool("buttonPressing", false);
