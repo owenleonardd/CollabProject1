@@ -8,11 +8,12 @@ public class CollisionHandler : MonoBehaviour
 {
     // Start is called before the first frame update
     public int minY;
-    
+    private Animator anim;
 
     private void Start()
     {
         minY = Math.Abs(minY);
+        anim = GetComponent<Animator>();
     }
 
     private void Update()
@@ -34,6 +35,7 @@ public class CollisionHandler : MonoBehaviour
 
     private void Die()
     {
+        anim.SetBool("dying", true);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }
