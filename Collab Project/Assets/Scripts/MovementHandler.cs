@@ -119,21 +119,31 @@ public class MovementHandler : MonoBehaviour
         _rigidbody2D.gravityScale *= -1;
         // speed *= -1;
         jumpForce *= -1;
-        StartCoroutine(Rotate());
+        StartCoroutine(Rotate(180));
         _isGrounded = false;
         _hasSwitchedGravity = true;
     }
     
-    private IEnumerator Rotate()
+    private IEnumerator Rotate(float targetRotation)
     {
-        float time = 0f;
-        while (time < 0.5f)
+        float totalRotation = 0f;
+
+        while (totalRotation < targetRotation)
         {
-            transform.Rotate(0f, 0f, 360f * Time.deltaTime);
-            time += Time.deltaTime;
+            float rotationAmount = 360f * Time.deltaTime;
+            transform.Rotate(0f, 0f, rotationAmount);
+            totalRotation += rotationAmount;
+
             yield return null;
         }
+        //if else statement to check if the gravity is positive or negative, then sets rotation to one of two results to make up for slight inaccuracies
+        if (_rigidbody2D.gravityScale < 0)
+            transform.rotation = Quaternion.Euler(Vector3.forward*180f);
+        else
+            transform.rotation = Quaternion.identity;
+
     }
+
 
     private IEnumerator DoSlimeTrail()
     {
