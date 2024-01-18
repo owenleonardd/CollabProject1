@@ -40,10 +40,14 @@ public class MovementHandler : MonoBehaviour
         slimeTrail = GameObject.Find("Slime").GetComponent<Tilemap>();
         groundTilemap = GameObject.Find("GroundTilemap").GetComponent<Tilemap>();
     }
-    
+
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space)&& _isGrounded)
+        if (anim.GetBool("dying")) {
+            _rigidbody2D.velocity = Vector2.zero;
+            return;
+        }
+    if (Input.GetKeyDown(KeyCode.Space)&& _isGrounded)
         {
             _rigidbody2D.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
         }
@@ -76,6 +80,8 @@ public class MovementHandler : MonoBehaviour
     
     private void FixedUpdate()
     {
+        if(anim.GetBool("dying"))
+            return;
         float horizontalInput = Input.GetAxis("Horizontal");
         _rigidbody2D.velocity = new Vector2(horizontalInput * speed, _rigidbody2D.velocity.y);
     }

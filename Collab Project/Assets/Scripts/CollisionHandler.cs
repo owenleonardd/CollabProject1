@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class CollisionHandler : MonoBehaviour
 {
@@ -10,17 +11,20 @@ public class CollisionHandler : MonoBehaviour
     public int minY;
     private Animator anim;
 
+    public Image fadeImage;
+    private FadeInOut fadeScript;
     private void Start()
     {
         minY = Math.Abs(minY);
         anim = GetComponent<Animator>();
+        fadeScript = fadeImage.GetComponent<FadeInOut>();
     }
 
     private void Update()
     {
         if (Math.Abs(transform.position.y) > minY)
         {
-            Die();
+            StartCoroutine(Die());
         }
     }
 
@@ -29,13 +33,18 @@ public class CollisionHandler : MonoBehaviour
         if (other.gameObject.CompareTag("Obstacle"))
         {
             Debug.Log("OBSTACLE");
-            Die();
+            StartCoroutine(Die());
         }
     }
 
-    private void Die()
+    public IEnumerator Die()
     {
+        fadeScript.FadeIn();
         anim.SetBool("dying", true);
+        yield return new WaitForSeconds(1);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        
+        
     }
+
 }
